@@ -46,18 +46,15 @@ func ArtHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// Generate ASCII art based on the selected banner style
-	result, err := ReadB(Banner)
+	asciiart, err := ChangeToArt(Banner, UserText)
 	if err != nil {
-		http.Error(w, "Error reading banner.", http.StatusInternalServerError)
+		http.Error(w, "", http.StatusInternalServerError)
 		log.Printf("Error reading banner: %v", err) // Log the error for debugging
 		return
 	}
 
-	// Process the user text and generated result to create ASCII art
-	asciiart := TreatData(result, UserText)
-
 	// Populate the page data with user input and generated ASCII art
-	Pagedata.Text = UserText
+	Pagedata.Text = ""
 	Pagedata.Banner = Banner
 	Pagedata.AsciiArt = asciiart
 

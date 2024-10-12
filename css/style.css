@@ -1,0 +1,131 @@
+body {
+
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh; 
+    background-image: url('image.jpg'); 
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+}
+
+
+h1 {
+    font-size: 2.5em; 
+    font-weight: bold;
+    background: linear-gradient(90deg, #68808a, #1b2153); 
+    text-shadow: 8px 8px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 3px;
+    width: 60%;
+    margin: auto;
+    padding: auto;
+}
+
+h1:hover {
+    transform: scale(1.1); 
+    transition: transform 0.10s ease;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8em; /* حجم أصغر للعناوين على الشاشات الصغيرة */
+    }
+}
+
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+h3 {
+    
+    font-family: 'Arial', sans-serif; 
+    font-size: 1.5em; 
+    font-weight: bold; 
+    color: #ffffff; 
+    margin: 20px 0; 
+    padding: 10px;
+    width: 50%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: auto;
+    transition: color 0.3s ease; /* انتقال سلس لتغيير اللون عند التمرير */
+}
+
+
+h3:hover {
+    color: #4bd1c6; 
+}
+
+.usertext {
+    width: 300px; 
+    height: 100px;
+    background-color: #465464;
+    color: #ffffff;
+    border: 4px solid #37807d; 
+    border-radius: 5px;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    text-wrap: nowrap;  
+    
+}
+
+
+.asciiart {
+    width: 80%; 
+    height: 200px;
+    background-color: #465464;
+    color: #ffffff;
+    border: 4px solid #37807d; 
+    text-wrap: nowrap;
+    padding: 10px;
+    border: 4px solid #37807d; 
+    border-radius: 5px;
+    
+}
+
+
+button {
+    background-color: #3c533d; /* لون الخلفية للزر */
+    border: none;
+    color: white;
+    padding: 10px 20px; 
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 5px;
+    cursor: pointer; 
+    border-radius: 8px; 
+}
+
+button:hover {
+    background-color: #45a049;
+}    
+
+
+.Choose {
+    font-family: 'Arial', sans-serif; 
+    font-size: 1.5em; 
+    font-weight: bold; 
+    color: #ffffff; 
+}
+
+.content {
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}

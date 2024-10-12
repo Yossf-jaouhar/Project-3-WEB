@@ -9,6 +9,9 @@ import (
 )
 
 func main() {
+
+	http.Handle("/css/", http.StripPrefix("/css/", http.FileServer(http.Dir("css"))))
+
 	http.HandleFunc("/", funcs.HomeHandler)
 	http.HandleFunc("/Art", funcs.ArtHandler)
 

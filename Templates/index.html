@@ -5,38 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Create and download custom ASCII art!">
     <title>ASCII ART Generator</title>
+    <!-- Link to the CSS file located in the 'css' folder -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- Bring Your Words to Life with ASCII Art!-->
-    
-    <h1>✒️ASCII ART🖍</h1>
-    <form action="/Art" method="post">
-        <h3>Entrer your text:</h3>
-        <div>
-            <textarea id="usertext" name="usertext" placeholder="Type your text here..." required>{{.Text}}</textarea>
-        </div>
+    <div class="content">
+         <h1>✒️ASCII ART🖍</h1>
+        <form action="/Art" method="post">
+            <h3>Entrer your text:</h3>
+            <div>
+                 <textarea class="usertext"  id="usertext" name="usertext"  rows="5" cols="40" placeholder="Type your text here..." required>{{.Text}}</textarea>
+            </div>
 
-        <form>
-            <fieldset>
-                <legend>Choose a bannar:</legend>
+           
+
+                <legend class="Choose">Choose a bannar:</legend>
                 <label>
-                    <input type="checkbox" id="banner1"  name="Banner" value="standard" >standard
+                    <button type="checkbox" id="banner1"  name="Banner" value="standard" >standard</button>
                 </label>
                 <label>
-                    <input type="checkbox" id="banner2" name="Banner" value="shadow">shadow
+                    <button type="checkbox" id="banner2" name="Banner" value="shadow">shadow</button>
                 </label>
                 <label>
-                    <input type="checkbox"  id="bannar3" name="Banner" value="thinkertoy">thinkertoy
+                    <button type="checkbox"  id="bannar3" name="Banner" value="thinkertoy">thinkertoy</button>
                 </label>
-            </fieldset>
-            <button type="submit">Submit</button>
-        </form>
+        
         
     </form>
+
+
+
     <h3>Your text in ASCII Art:</h3>   
     <div>
-        <textarea placeholder="ASCII art will appear here..." readonly>{{.AsciiArt}}</textarea>
+        <textarea class="asciiart" readonly>
+{{.AsciiArt}}</textarea>
     </div>
 
+
+    </div>
+     
+     
+     
+     
 </body>
 </html>
